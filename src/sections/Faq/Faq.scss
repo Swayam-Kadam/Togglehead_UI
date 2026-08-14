@@ -1,0 +1,99 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.faq {
+  width: 100%;
+  background: $color-white;
+  padding: 70px $page-gutter 80px;
+
+  &__title {
+    margin: 0 0 40px;
+    text-align: center;
+    color: $color-primary;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: $letter-spacing;
+    font-family: $font-family-bold;
+    line-height: 1.1;
+  }
+
+  &__item {
+    border-top: 1px solid $color-border;
+
+    &:last-child {
+      border-bottom: 1px solid $color-border;
+    }
+  }
+
+  &__question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 22px 0;
+    text-align: left;
+
+    span {
+      flex: 1;
+      color: $color-text;
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: $letter-spacing;
+      font-family: $font-family;
+      line-height: 1.4;
+    }
+
+    img {
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+    }
+  }
+
+  &__item.is-open &__question span {
+    color: $color-primary;
+    font-weight: 500;
+  }
+
+  &__answer {
+    margin: 0 0 24px;
+    padding-right: 60px;
+    max-width: 1230px;
+    color: $color-text;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: $letter-spacing;
+    font-family: $font-family;
+    line-height: 1.55;
+  }
+
+  @include respond-down($bp-lg) {
+    padding: 40px 20px;
+
+    &__title {
+      margin-bottom: 24px;
+      font-size: 32px;
+    }
+
+    &__question {
+      align-items: flex-start;
+      gap: 12px;
+      padding: 16px 0;
+
+      span {
+        font-size: 16px;
+      }
+
+      img {
+        width: 28px;
+        height: 28px;
+      }
+    }
+
+    &__answer {
+      padding-right: 0;
+      font-size: 16px;
+    }
+  }
+}

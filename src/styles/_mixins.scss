@@ -1,0 +1,27 @@
+@use "variables" as *;
+
+@mixin respond-down($bp) {
+  @media (max-width: $bp) {
+    @content;
+  }
+}
+
+@mixin page-gutter {
+  padding-inline: $page-gutter;
+
+  @include respond-down($bp-lg) {
+    padding-inline: 40px;
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

@@ -1,0 +1,156 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.header {
+  @include flex-between;
+  position: relative;
+  width: 100%;
+  height: $header-height;
+  background: $color-primary;
+  z-index: 20;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 92px;
+    height: $header-height;
+    margin-left: $page-gutter;
+
+    img {
+      width: 92px;
+      height: 46px;
+    }
+  }
+
+  &__toggle {
+    display: none;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    a {
+      color: $color-white;
+      font-size: 22px;
+      font-weight: 400;
+      letter-spacing: 0.26px;
+      font-family: $font-family;
+    }
+  }
+
+  &__search {
+    width: 24px;
+    height: 24px;
+    margin: 0 25px;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__cta {
+    background: $color-white;
+    color: $color-primary;
+    border-radius: $radius-sm;
+    padding: 10px 20px;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 0.26px;
+    font-family: $font-family;
+  }
+
+  @include respond-down($bp-lg) {
+    height: 72px;
+    padding-right: 16px;
+
+    &__logo {
+      width: 72px;
+      height: 72px;
+      margin-left: 20px;
+
+      img {
+        width: 72px;
+        height: 36px;
+      }
+    }
+
+    &__toggle {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 40px;
+      height: 40px;
+      z-index: 22;
+
+      span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: $color-white;
+        transition: transform $transition, opacity $transition;
+      }
+
+      &.is-open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+
+      &.is-open span:nth-child(2) {
+        opacity: 0;
+      }
+
+      &.is-open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+    }
+
+    &__actions {
+      position: absolute;
+      top: 72px;
+      left: 0;
+      right: 0;
+      margin: 0;
+      padding: 20px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+      background: $color-primary;
+      transform: translateY(-8px);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity $transition, transform $transition;
+
+      &.is-open {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+    }
+
+    &__list {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    &__search {
+      margin: 0;
+    }
+  }
+}

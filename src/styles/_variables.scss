@@ -1,0 +1,31 @@
+$color-primary: #12406f;
+$color-primary-dark: #002f5f;
+$color-primary-mid: #1a4570;
+$color-accent: #54a0d4;
+$color-text: #525252;
+$color-text-muted: #949494;
+$color-white: #ffffff;
+$color-bg: #ffffff;
+$color-bg-soft: linear-gradient(to right, #ebebeb, #f8f8f8);
+$color-border: #e0e0e0;
+$color-divider: #ebebeb;
+$color-shadow: rgba(18, 64, 111, 0.16);
+
+$font-family: "FSAlbert", "Albert Sans", "Segoe UI", sans-serif;
+$font-family-bold: "FSAlbert-Bold", "FSAlbert", "Albert Sans", sans-serif;
+$letter-spacing: 0.016em;
+$letter-spacing-tight: 0.012em;
+
+$page-gutter: 140px;
+$header-height: 110px;
+$footer-height: 426px;
+$container-width: 1920px;
+
+$radius-sm: 10px;
+$radius-lg: 26px;
+
+$bp-sm: 576px;
+$bp-md: 768px;
+$bp-lg: 992px;
+
+$transition: 0.25s ease;

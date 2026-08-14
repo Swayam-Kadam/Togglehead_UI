@@ -1,0 +1,111 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.qualifications {
+  padding: 50px 140px;
+  background: $color-white;
+
+  &__inner {
+    display: flex;
+    align-items: flex-start;
+    gap: 48px;
+  }
+
+  &__intro {
+    flex: 0 0 230px;
+    padding-right: 28px;
+    border-right: 3px solid $color-divider;
+  }
+
+  &__title {
+    font-family: $font-family-bold;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.15;
+    color: $color-primary;
+    letter-spacing: $letter-spacing;
+    margin-bottom: 14px;
+  }
+
+  &__subtitle {
+    font-family: $font-family;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.45;
+    color: $color-text;
+    letter-spacing: $letter-spacing;
+  }
+
+  &__list {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: 32px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    min-width: 0;
+  }
+
+  &__icon {
+    width: 53px;
+    height: 55px;
+    flex-shrink: 0;
+  }
+
+  &__date {
+    font-family: $font-family-bold;
+    font-size: 24px;
+    font-weight: 700;
+    color: $color-primary;
+    letter-spacing: $letter-spacing;
+    line-height: 1.25;
+    margin-bottom: 2px;
+  }
+
+  &__detail {
+    font-family: $font-family;
+    font-size: 24px;
+    font-weight: 400;
+    color: $color-text;
+    letter-spacing: $letter-spacing;
+    line-height: 1.35;
+  }
+
+  @include respond-down($bp-lg) {
+    padding: 40px 20px;
+
+    &__inner {
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    &__intro {
+      flex: none;
+      width: 100%;
+      border-right: none;
+      border-bottom: 3px solid $color-divider;
+      padding-right: 0;
+      padding-bottom: 24px;
+    }
+
+    &__title {
+      font-size: 32px;
+    }
+
+    &__list {
+      flex-direction: column;
+      width: 100%;
+      gap: 20px;
+    }
+
+    &__date,
+    &__detail {
+      font-size: 18px;
+    }
+  }
+}

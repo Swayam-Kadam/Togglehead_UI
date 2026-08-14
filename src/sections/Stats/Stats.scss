@@ -1,0 +1,95 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.stats {
+  width: 100%;
+  min-height: 462px;
+  background: $color-bg-soft;
+  padding: 70px $page-gutter;
+
+  &__row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  &__col {
+    flex: 1 1 0;
+    min-width: 0;
+    text-align: left;
+  }
+
+  &__label {
+    margin: 0;
+    color: $color-primary;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: $letter-spacing;
+    font-family: $font-family;
+    line-height: 1.2;
+  }
+
+  &__image {
+    display: block;
+    height: 92px;
+    width: auto;
+    margin: 6px 0 4px;
+  }
+
+  &__subtitle {
+    margin: 0 0 12px;
+    color: $color-primary;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: $letter-spacing;
+    font-family: $font-family-bold;
+    line-height: 1.2;
+  }
+
+  &__description {
+    margin: 0;
+    color: $color-primary;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: $letter-spacing;
+    font-family: $font-family;
+    line-height: 1.5;
+  }
+
+  @include respond-down($bp-lg) {
+    min-height: 0;
+    padding: 40px 20px;
+
+    &__row {
+      flex-wrap: wrap;
+      gap: 28px;
+    }
+
+    &__col {
+      flex: 1 1 45%;
+    }
+
+    &__image {
+      height: 64px;
+    }
+
+    &__label {
+      font-size: 18px;
+    }
+
+    &__subtitle {
+      font-size: 20px;
+    }
+
+    &__description {
+      font-size: 16px;
+    }
+  }
+
+  @include respond-down($bp-md) {
+    &__col {
+      flex: 1 1 100%;
+    }
+  }
+}
