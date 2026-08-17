@@ -36,11 +36,20 @@ const Qualifications = () => {
         <div className="qualifications__list">
           {EXAMS.map((exam) => (
             <article className="qualifications__item" key={exam.date}>
+              <div style={{ position: "relative" }}>
               <img
                 className="qualifications__icon"
                 src={exam.icon}
                 alt=""
               />
+              <div style={{ position: "absolute", bottom: 12, right: 10 }}>
+              <img
+                className=""
+                src="/images/Group 2647.png"
+                alt=""
+              />
+              </div>
+              </div>
               <div className="qualifications__content">
                 <h3 className="qualifications__date">{exam.date}</h3>
                 {exam.details.map((line) => (

@@ -3,25 +3,25 @@ import "./Stats.scss";
 const STATS = [
   {
     title: "Lorem ipsum",
-    image: "/images/123+.svg",
+    image: "/images/123+.png",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat",
   },
   {
     title: "Lorem ipsum",
-    image: "/images/12+.svg",
+    image: "/images/12+.png",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et",
   },
   {
     title: "Lorem ipsum",
-    image: "/images/12+.svg",
+    image: "/images/12+.png",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et",
   },
   {
     title: "Lorem ipsum",
-    image: "/images/123.svg",
+    image: "/images/123.png",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut",
   },
